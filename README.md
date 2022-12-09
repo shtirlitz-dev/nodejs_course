@@ -62,3 +62,5 @@ JavaScript: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 javascript.ru. Введение в модули: https://learn.javascript.ru/modules-intro
 
 MDN. Модули JavaScript: https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Modules
+
+to be continue...
