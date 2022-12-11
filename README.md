@@ -63,4 +63,40 @@ javascript.ru. Введение в модули: https://learn.javascript.ru/mod
 
 MDN. Модули JavaScript: https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Modules
 
-to be continue...
+
+Node.js API  https://nodejs.org/api/
+modules:
+
+path - dir and files
+path.posix, path.win32 - explicitly
+
+functions: path.join, i.e. path.win32.join or path.posix.join, path.join - imlicitly selects
+url
+os: homedir(), tmpdir()
+events: emitter.emit, emitter.on
+
+HTTP module: https://nodejs.org/api/http.html#http_http
+
+how to parse url in js https://habr.com/ru/post/510742/
+
+usually a framework is used: Express or koa
+
+Официальная документация к системным модулям Node.js (англ.): https://nodejs.org/api/documentation.html
+
+Официальная документация к модулю FS (англ.): https://nodejs.org/api/fs.html
+
+Официальная документация к модулю HTTP (англ.): https://nodejs.org/api/http.html
+
+Официальная документация к модулю Path (англ.): https://nodejs.org/api/path.html
+
+Официальная документация к модулю URL (англ.): https://nodejs.org/api/url.html
+
+Официальная документация к модулю OS (англ.): https://nodejs.org/api/os.html
+
+Официальная документация к модулю Events (англ.): https://nodejs.org/api/events.html
+
+Event loop
+
+Morning Keynote – Everything You Need to Know About Node.js Event Loop – Bert Belder, IBM: https://www.youtube.com/watch?v=PNa9OMajw9w
+
+The Node.js Event Loop, Timers, and process.nextTick() (англ.): https://nodejs.org/ru/docs/guides/event-loop-timers-and-nexttick/
