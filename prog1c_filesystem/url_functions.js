@@ -14,8 +14,8 @@ console.log(u.pathname);
 */
 console.log(u.searchParams.get('message'));
 
-// for(const k in u)
-//     console.log(`${k}: ${u[k]}`);
+ for(const k in u)
+     console.log(`${k}: ${u[k]}`);
 
 
 

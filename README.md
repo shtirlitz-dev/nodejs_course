@@ -100,3 +100,21 @@ Event loop
 Morning Keynote – Everything You Need to Know About Node.js Event Loop – Bert Belder, IBM: https://www.youtube.com/watch?v=PNa9OMajw9w
 
 The Node.js Event Loop, Timers, and process.nextTick() (англ.): https://nodejs.org/ru/docs/guides/event-loop-timers-and-nexttick/
+
+Modules:
+
+Search packets: npm search "what for" --long
+
+Details (for koa module): npm view koa
+
+or npmjs.com
+
+install module: npm install koa
+
+create paackage.json: npm init
+
+uninstall module: npm remove koa
+
+logs: module winston
+
+Доступные команды пакетного менеджера NPM (англ.): https://docs.npmjs.com/cli/v8/commands

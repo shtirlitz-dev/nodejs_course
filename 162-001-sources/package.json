@@ -1,0 +1,7 @@
+{
+    "name": "echo-server-demo",
+    "version": "0.1.0",
+    "dependencies": {
+        "winston": "^3.2.1"
+    }
+}
