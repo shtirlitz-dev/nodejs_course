@@ -1,6 +1,11 @@
+/*
+const Router = require('@koa/router');
+const {bodyParser} = reqire('koa-body')
+*/
+
 const Router = require('koa-router');
-//const bodyParser = reqire('koa-body')
 const {koaBody} = require('koa-body');
+
 
 // all for /albums
 const router = new Router({prefix: '/albums'});
