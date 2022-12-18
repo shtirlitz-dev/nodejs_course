@@ -150,5 +150,14 @@ BODY parsing: npm install koa-body
 Postman for linux => GetIt
 
 
+MDN. HTTP: https://developer.mozilla.org/ru/docs/Web/HTTP
+
+Fielding, Roy Thomas. Representational State Transfer (REST) (англ.): https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+
+Официальная документация @koa/router (англ.): https://www.npmjs.com/package/koa-router
+
+curl для Windows: https://curl.se/windows/
+
+Официальная документация koa-body (англ.): https://www.npmjs.com/package/koa-body
 
 
