@@ -1,4 +1,6 @@
-const Router = require('@koa/router');
+const Router = require('koa-router');
+//const bodyParser = reqire('koa-body')
+const {koaBody} = require('koa-body');
 
 // all for /albums
 const router = new Router({prefix: '/albums'});
@@ -18,8 +20,11 @@ router.get('/:id', (ctx, next) => {
     ctx.body = `Albums ${ctx.params.id}`;
 });
 
-router.post('/', (ctx, next) => {
-    const resourceID = Math.random();
+
+//router.post('/', (ctx, next) => {
+//router.post('/', bodyParser({multipart: true}), (ctx, next) => {
+router.post('/', koaBody({multipart: true}), (ctx, next) => {
+        const resourceID = Math.random();
     console.log(JSON.stringify(ctx.request.body));
     ctx.set('Location', `/albums/${resourceID}`);
     ctx.status = 201; // created
