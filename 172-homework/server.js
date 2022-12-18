@@ -6,7 +6,7 @@ const server = http.createServer(async (req, res) => {
   console.log(url.href);
   console.log(process.cwd());
 
-  const fileName = '.\\test' + url.pathname;
+  const fileName = path.join(__dirname, 'public', url.pathname);
   res.setHeader('Content-Type', 'text/plain;charset=utf-8');
 
   let isFile = false;
@@ -20,8 +20,8 @@ const server = http.createServer(async (req, res) => {
   if(isFile) {
       res.statusCode = 200;
       //const content = fs.readFile(fileName);
-      //fs.createReadStream(fileName).pipe(res);
-      res.end('Hello World text file!');
+      fs.createReadStream(fileName).pipe(res);
+      //res.end('Hello World text file!');
     }
     else {
       res.statusCode = 404;

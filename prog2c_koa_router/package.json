@@ -1,0 +1,17 @@
+{
+  "name": "prog2c_koa_router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "koa_router_svr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "koa": "^2.14.1",
+    "koa-body": "^6.0.1"
+  }
+}

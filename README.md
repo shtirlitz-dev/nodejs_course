@@ -118,3 +118,33 @@ uninstall module: npm remove koa
 logs: module winston
 
 Доступные команды пакетного менеджера NPM (англ.): https://docs.npmjs.com/cli/v8/commands
+
+
+KOA
+
+info https://koajs.com/
+
+about some class, e.g. https://koajs.com/#context
+
+
+Debug: node inspect my.js
+
+debugger = statement as breakpoint, node inspect will stop on it, then 'cont' (use 'help' to see commands)
+
+node --inspect my.js -> gives url, open chrome://inspect/#devices
+
+     --inspect-brk   -> sdebug and stop at the first statement
+
+Руководство по отладке Node.js   https://nodejs.org/ru/docs/guides/debugging-getting-started/
+
+
+Router: npm install @koa/router  (koa must be istalled too)
+
+curl -X GET localhost:3000  [&& echo]
+
+curl -v -X OPTIONS localhost:3000
+
+
+BODY parsing: npm install koa-body
+
+
