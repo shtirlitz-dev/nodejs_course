@@ -21,10 +21,22 @@ module.exports = async function logger(ctx, next) {
         * HTTP-метод входящего запроса
         * URL-адрес входящего запроса
     */
+    method: ctx.method,
+    url: ctx.request.url
   })
 
-  await next();
-  const duration = Date.now() - start;
+    try{
+      await next();
+    }
+    finally {
+      const duration = Date.now() - start;
+      log({
+        method: ctx.method,
+        url: ctx.request.url,
+        duration: duration
+      })
+    
+    }
   /*
     TODO:
       Добавьте в логи запись, содержащую следующие сведения:
