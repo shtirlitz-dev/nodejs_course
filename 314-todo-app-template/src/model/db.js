@@ -20,6 +20,13 @@ class Connection {
     }
     this._client = new MongoClient(this._url, {
       useNewUrlParser: true,
+      //connectTimeoutMS: 2000,
+      //serverSelectionTimeoutMS: 2000,
+      //socketTimeoutMS: 2000,
+      //noDelay: true,
+      //secondaryAcceptableLatencyMS : 1000,
+      //acceptableLatencyMS : 1000,
+      //numberOfRetries: 1,
       useUnifiedTopology: true
     })
     await this._client.connect()

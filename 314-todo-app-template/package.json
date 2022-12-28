@@ -35,8 +35,8 @@
     "lint": "standard --fix \"src/**/*.js\"",
     "start": "node src/index.js",
     "check-homework": "node ./check-homework/get-code.js",
-    "test": "mocha --recursive --timeout=10000 test/index.js test",
-    "test-watch": "mocha --recursive --watch --timeout=10000 test/index.js test",
+    "test": "mocha --recursive --timeout=20000 test/index.js test",
+    "test-watch": "mocha --recursive --watch --timeout=20000 test/index.js test",
     "watch": "nodemon src/index.js"
   },
   "standard": {
