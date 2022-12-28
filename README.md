@@ -160,4 +160,45 @@ curl для Windows: https://curl.se/windows/
 
 Официальная документация koa-body (англ.): https://www.npmjs.com/package/koa-body
 
+Todo MVC project (the same app in different JS frameworks) https://todomvc.com/
 
+
+
+MongoDB (https://mongodb.org) 
+
+Официальные бесплатные курсы по MongoDB (англ.): https://university.mongodb.com/
+
+Документация к драйверу MongoDB для Node.js: https://docs.mongodb.com/drivers/node/current/
+
+Подключение к MongoDB из приложения на Node.js (англ.): https://docs.mongodb.com/drivers/node/current/quick-start/
+
+Регистрация в MongoDB Atlas: https://www.mongodb.com/cloud/atlas/register
+
+or local version  Products -> Community Edition -> Community Server
+
+Для того, чтобы экспериментировать с базой данных и выполнять произвольные запросы, можно дополнительно установить MongoDB Compass
+
+Строка подключения к локальной базе данных: mongodb://localhost.
+
+
+
+tests
+
+Джерард Месарош. Шаблоны тестирования xUnit. Издательство: М.: Вильямс Год: 2009. Выдержки на англ.: http://xunitpatterns.com/
+
+Сайт проекта Mocha (англ.): https://mochajs.org/
+
+Документация к модулю supertest (англ.): https://www.npmjs.com/package/supertest
+
+
+mongoDb shell
+
+show dbs => all existing dbs
+
+use (db name) => switch to this db
+
+show collections
+
+db.(collection name).findOne()
+
+db.<collection>.find({condition}, {fields: true or false}).sort({filds : -1 or 1}).skip(5).limit(2)
