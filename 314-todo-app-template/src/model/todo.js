@@ -87,8 +87,10 @@ function getTodos (query) {
  * @param {Object} query - критерии поиска todo
  * @returns {TodoEntry} - запись списка дел
  */
-function getTodo (query) {
-  const col = dbConnection.getCollection(COLLECTION)
+async function getTodo (query) {
+  const col = dbConnection.getCollection(COLLECTION);
+  const rec = await col.findOne(query);
+  return _mapObjectId(rec);
   /*
     TODO [Урок 4.1]: Реализуйте логику получения одной записи списка дел из базы данных
 

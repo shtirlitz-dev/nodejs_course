@@ -66,6 +66,7 @@ router.use(apiAuth)
 router.get('/', totalMiddleware, async (ctx, next) => {
   const { contentType } = ctx.query
   const filter = {
+    completed: ctx.query.completed,
     /*
       TODO [Урок 4.1]: Заполните значение переменной filter.
 
@@ -95,6 +96,7 @@ router.get('/', totalMiddleware, async (ctx, next) => {
 // Получение одной записи из списка дел по идентификатору
 router.get('/:id', async (ctx, next) => {
   const result = await getTodo({
+    _id : ctx.params.id,
     /*
       TODO [Урок 4.1]: Реализуйте фильтр записей списка дел по идентификатору.
 
