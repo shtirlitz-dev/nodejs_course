@@ -89,10 +89,10 @@ function getTodos (query) {
  */
 async function getTodo (query) {
   const col = dbConnection.getCollection(COLLECTION);
-  const rec = await col.findOne(query);
-  return _mapObjectId(rec);
+  const rec = await col.findOne(_mapObjectId(query));
+  return rec;
   /*
-    TODO [Урок 4.1]: Реализуйте логику получения одной записи списка дел из базы данных
+    TODO [Урок 4.1] - done: Реализуйте логику получения одной записи списка дел из базы данных
 
     - Используйте функцию col.findOne [http://mongodb.github.io/node-mongodb-native/3.5/api/Collection.html#findOne]:
       await col.findOne(<параметры поиска>)
