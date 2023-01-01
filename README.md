@@ -229,3 +229,28 @@ https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/#mongod
 https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany
 
 Создание документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/write-operations/insert/
+
+
+updateOne({_id: searchId}, {$set: {"price" : NumberDecimal("200") } } ) -> {acknowledged:1, insertedId: null, matchedCount: 1, ModifiedCount: 1, upsertedCount: 0}
+
+$inc $max $min $mul $rename $set $setOnInsert $currentDate $unset (deletes field)  ex. {$unset:{beds:true}}
+
+updateMany
+
+add to array field: {$push: {reviews: {comments: "Sample review" }}}
+
+remove from array updateOne({_id: ObjectId("...")},  {$pull: { reviews: {"comment" : "Sample review"}}}
+
+update operations: https://www.mongodb.com/docs/manual/reference/operator/update/
+
+https://www.mongodb.com/docs/manual/reference/command/update/#mongodb-dbcommand-dbcmd.update
+
+
+Редактирование документов в MongoDB shell (англ.):
+
+https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/#mongodb-method-db.collection.updateOne,
+
+https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/#mongodb-method-db.collection.updateMany
+
+Редактирование документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/write-operations/change-a-document/
+

@@ -114,7 +114,7 @@ async function getTodo (query) {
 async function updateTodo (query, data) {
   const col = dbConnection.getCollection(COLLECTION)
   /*
-    TODO [Урок 4.3]: Реализуйте логику обновления записи todo.
+    TODO [Урок 4.3] - done: Реализуйте логику обновления записи todo.
 
     - Используйте функцию col.updateOne [http://mongodb.github.io/node-mongodb-native/3.5/api/Collection.html#updateOne]:
       await col.updateOne(<параметры поиска>)
@@ -125,6 +125,8 @@ async function updateTodo (query, data) {
     Подсказка: используйте поле `result` из результата выполнения функции col.updateOne,
     чтобы выяснить, успешно ли выполнено обновление записи базе данных?
    */
+  const res = await col.updateOne(_mapObjectId(query), {$set: data});
+  return res.matchedCount == 1;
 }
 
 /**
