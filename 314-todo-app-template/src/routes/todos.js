@@ -43,8 +43,11 @@ function parseFilterValue (value) {
  */
 function parseTodo (requestBody) {
   const todo = {
+    title: requestBody.title,
+    completed: requestBody.completed,
+    completedAt: requestBody.completed? new Date() : null,
     /*
-      TODO [Урок 4.2]: Заполните описание задачи списка дел:
+      TODO [Урок 4.2] -done: Заполните описание задачи списка дел:
       {
         title: строка
         completed: boolean

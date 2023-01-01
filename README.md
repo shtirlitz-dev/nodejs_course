@@ -202,3 +202,30 @@ show collections
 db.(collection name).findOne()
 
 db.<collection>.find({condition}, {fields: true or false}).sort({filds : -1 or 1}).skip(5).limit(2)
+
+
+
+Вход в MongoDB Atlas: https://account.mongodb.com/account/login
+
+Установка MongoDB shell: https://www.mongodb.com/try/download/shell
+
+Документация к API MongoDB Shell (англ.): https://docs.mongodb.com/manual/reference/method/
+
+Поиск документов в MongoDB shell (англ.): https://docs.mongodb.com/manual/reference/method/db.collection.find/#mongodb-method-db.collection.find
+
+Создание, редактирование, чтение и удаление данных с помощью драйвера MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/
+
+Поиск документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/read-operations/retrieve/
+
+Indexes of collections:
+
+db.<collection>.getIndexes()
+
+
+Создание документов в MongoDB shell (англ.):
+
+https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/#mongodb-method-db.collection.insertOne,
+
+https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany
+
+Создание документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/write-operations/insert/
