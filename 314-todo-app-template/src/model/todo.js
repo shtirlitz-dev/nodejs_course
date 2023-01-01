@@ -65,7 +65,7 @@ async function createTodo (data) {
 async function deleteTodo (query) {
   const col = dbConnection.getCollection(COLLECTION)
   /*
-    TODO [Урок 4.4]: Реализуйте логику удаления записи списка дел из базы данных
+    TODO [Урок 4.4] - done: Реализуйте логику удаления записи списка дел из базы данных
 
     Используйте функцию col.deleteOne [http://mongodb.github.io/node-mongodb-native/3.5/api/Collection.html#deleteOne]:
       await col.deleteOne(<параметры поиска>)
@@ -73,6 +73,8 @@ async function deleteTodo (query) {
     Подсказка: используйте поле `result` из результата выполнения функции col.updateOne,
     чтобы выяснить, успешно ли выполнено удаление записи из базы данных?
   */
+ const res = await col.deleteOne(_mapObjectId(query));
+ return res.deletedCount == 1;
 }
 
 /**

@@ -254,3 +254,18 @@ https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/#mongo
 
 Редактирование документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/write-operations/change-a-document/
 
+
+
+deleteOne deleteMany  -> {deletedCount: 1}
+
+deleteMany( {} ) -> deletes all
+
+
+Удаление документов в MongoDB shell (англ.):
+
+https://docs.mongodb.com/manual/reference/method/db.collection.deleteOne/#mongodb-method-db.collection.deleteOne,
+
+https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/#mongodb-method-db.collection.deleteMany
+
+Удаление документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/write-operations/delete/
+
