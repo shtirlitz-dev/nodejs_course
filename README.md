@@ -269,3 +269,14 @@ https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/#mongo
 
 Удаление документов через драйвер MongoDB для Node.js (англ.): https://docs.mongodb.com/drivers/node/current/fundamentals/crud/write-operations/delete/
 
+
+Todo.Txt
+
+
+Документация к jsTodoTxt (англ.): https://www.npmjs.com/package/jstodotxt
+
+Сайт проекта Todo.txt (англ.): http://todotxt.org/
+
+http://todotxt.org/   https://github.com/todotxt/todo.txt    https://github.com/jmhobbs/jsTodoTxt
+
+

@@ -67,7 +67,8 @@ router.use(apiAuth)
 
 // Получение списка задач. Фильтры задаются параметрами GET-запроса
 router.get('/', totalMiddleware, async (ctx, next) => {
-  const { contentType } = ctx.query
+  const { contentType, ...query } = ctx.query
+
   const filter = {
     /*
       TODO [Урок 4.1] - done: Заполните значение переменной filter.
@@ -83,10 +84,21 @@ router.get('/', totalMiddleware, async (ctx, next) => {
       TODO [Урок 5.3]: Добавьте фильтр по email-адреса пользователя при получении записей из БД
     */
   }
-  for(const k in ctx.query) {
+  for(const k in query) {
     filter[k] = parseFilterValue(ctx.query[k]);
   }
-  const cursor = getTodos(filter)
+  // alternative way
+  const filter2 = Object 
+    .entries(query)
+    .reduce(
+      (filterObj, [key, value]) => {
+        return {...filterObj, [key]: parseFilterValue(value)};
+      },
+       {email: ctx.state.user.email}
+    )
+
+
+  const cursor = getTodos(filter2)
   switch (contentType) {
     case 'todotxt':
       ctx.type = 'text/plain'

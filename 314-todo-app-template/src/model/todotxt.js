@@ -7,8 +7,11 @@ const { TodoTxtItem, TodoTxt } = require('jstodotxt')
  */
 function exportTodoTxt (todo) {
   const todotxt = new TodoTxtItem()
-  /*
-    TODO [Урок 4.5]: Заполните объект todotxt
+  todotxt.text      = todo.title;
+  todotxt.complete  = todo.completed;
+  todotxt.completed = todo.completedAt;
+/*
+    TODO [Урок 4.5] - done: Заполните объект todotxt
 
     Используйте значения аргумента todo, чтобы заполнить поля объекта todotxt
   */
