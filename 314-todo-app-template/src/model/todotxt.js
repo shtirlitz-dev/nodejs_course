@@ -24,7 +24,7 @@ function exportTodoTxt (todo) {
  * @returns {Object[]} - массив записей todo
  */
 function importTodoTxt (fileContent) {
-  const todotxts = TodoTxt.parse(fileContent.trim())
+  const todotxts = TodoTxt.parse(fileContent.trim()) // An array of TodoTxtItem objects.
   return todotxts.map(todotxt => ({
     title: todotxt.text,
     completed: todotxt.complete,

@@ -139,10 +139,15 @@ async function updateTodo (query, data) {
  */
 async function createTodosFromText (filePath, email) {
   const fileContent = await fs.readFile(filePath)
-  const todos = importTodoTxt(fileContent.toString())
-  const col = dbConnection.getCollection(COLLECTION)
+  const todos = importTodoTxt(fileContent.toString()) // An array of todo objects (title, completed, completedAt).
+
+  const todosE = todos.map(td => ({ // add email in every element
+    ...td,
+    email // same as 'email : email'
+  }));
+  const col = dbConnection.getCollection(COLLECTION);
   /*
-    TODO [Урок 4.6]: Сохраните импортированные записи списка дел в базу данных.
+    TODO [Урок 4.6] - done: Сохраните импортированные записи списка дел в базу данных.
 
     Используйте переменную todos в качестве источника новых записей списка дел.
     Используйте функцию col.insertMany(<записи списка дел>)[http://mongodb.github.io/node-mongodb-native/3.5/api/Collection.html#insertMany],
@@ -150,6 +155,24 @@ async function createTodosFromText (filePath, email) {
 
     Верните массив созданных записей списка дел
   */
+  const inserted = await col.insertMany(todosE);
+  //console.log('inserted:', inserted);
+  /*
+inserted: {
+  result: { ok: 1, n: 1, opTime: { ts: [Timestamp], t: 765 } },
+  ops: [
+    {
+      title: '24e3c3eb-bde6-416c-9d5d-f854596785ee',
+      completed: true,
+      completedAt: 2019-12-31T23:00:00.000Z,
+      email: '52c1b945-809c-4a6b-98ce-1999d3f06332',
+      _id: 63b36b90827f752aa0ec67a4
+    }
+  ],
+  insertedCount: 1,
+  insertedIds: { '0': 63b36b90827f752aa0ec67a4 }
+}  */
+  return inserted.ops;
 }
 
 /**

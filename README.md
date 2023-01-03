@@ -279,4 +279,7 @@ Todo.Txt
 
 http://todotxt.org/   https://github.com/todotxt/todo.txt    https://github.com/jmhobbs/jsTodoTxt
 
+Documentation MongoDB driver, insertMany
+http://mongodb.github.io/node-mongodb-native/3.5/api/Collection.html#insertMany
+
 
