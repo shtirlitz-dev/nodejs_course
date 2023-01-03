@@ -280,6 +280,24 @@ Todo.Txt
 http://todotxt.org/   https://github.com/todotxt/todo.txt    https://github.com/jmhobbs/jsTodoTxt
 
 Documentation MongoDB driver, insertMany
+
 http://mongodb.github.io/node-mongodb-native/3.5/api/Collection.html#insertMany
 
 
+
+
+OAuth 2 Simplified (англ.): https://aaronparecki.com/oauth-2-simplified/
+
+
+console.cloud.google.com -> Google cloud -> select project -> new project -> name -> (API & services -> Credentials) 
+-> external, name and e-mails
+
+
+parrport: module for OAuth -> npm install koa-passport passport-google-oauth20
+
+
+Аутентификация через Google с использованием OpenID Connect (англ.): https://developers.google.com/identity/protocols/oauth2/openid-connect
+
+Получение email-адреса пользователя после аутентифкации через Google (англ.): https://developers.google.com/identity/protocols/oauth2/openid-connect#obtaininguserprofileinformation
+
+Сайт проекта Passport (англ.): https://www.passportjs.org/
