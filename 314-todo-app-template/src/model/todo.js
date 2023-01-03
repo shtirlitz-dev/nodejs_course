@@ -181,19 +181,22 @@ inserted: {
  * @returns {TodosCount} - количество записей в списке дел: { total, completed }
  */
 async function getCount (user) {
+  //console.log('getCount user =', user)
   const col = dbConnection.getCollection(COLLECTION)
   const [total, completed] = await Promise.all([
     col.countDocuments({
       /*
-        TODO [Урок 5.3]: Добавьте проверку email-адреса пользователя при получении количества записей в БД
+        TODO [Урок 5.3] - done: Добавьте проверку email-адреса пользователя при получении количества записей в БД
       */
+     email: user.email
     }),
     col.countDocuments({
       completed: true,
       /*
-        TODO [Урок 5.3]: Добавьте проверку email-адреса пользователя при получении количества записей в БД
+        TODO [Урок 5.3] - done : Добавьте проверку email-адреса пользователя при получении количества записей в БД
       */
-    })
+        email: user.email
+      })
   ])
 
   return { completed, total }
