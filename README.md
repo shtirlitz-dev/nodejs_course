@@ -301,3 +301,6 @@ parrport: module for OAuth -> npm install koa-passport passport-google-oauth20
 Получение email-адреса пользователя после аутентифкации через Google (англ.): https://developers.google.com/identity/protocols/oauth2/openid-connect#obtaininguserprofileinformation
 
 Сайт проекта Passport (англ.): https://www.passportjs.org/
+
+The end of the course
+
